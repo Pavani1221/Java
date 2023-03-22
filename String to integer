@@ -1,0 +1,13 @@
+import java.io.*;
+import java.util.*;
+public class sti
+{
+    public static void main(String args[])
+    {
+        System.out.print("enter the string:");
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        int n=Integer.parseInt(str);
+        System.out.print("After converting integer to string is "+n);
+    }
+}
