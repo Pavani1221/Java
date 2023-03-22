@@ -1,0 +1,19 @@
+import java.util.*;
+import java.util.Arrays;
+public class arrange
+ {
+   
+    public static void main(String args[])
+    {
+        System.out.print("enter the string:");
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        char a[]=str.toCharArray();
+        Arrays.sort(a);
+        for(int i=a.length-1;i>=0;i--)
+        System.out.print(a[i]);
+        
+
+    
+}
+}
