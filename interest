@@ -1,0 +1,19 @@
+import java.util.*;
+public class simpleinterest
+{
+    public static void main(String[] args)
+     {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the principal amount: ");
+        double p = sc.nextDouble();
+        System.out.print("Enter the total number of years: ");
+        double t = sc.nextDouble();
+        System.out.print("Enter whether the user is senior(y/n):");
+        String c = sc.next();
+        double r=c.equals('y')?12:10;
+         double i=(p*t*r)/100;
+        System.out.print("simple interest:"+i);
+
+    
+}
+}
