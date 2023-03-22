@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+class valid
+{
+    public static void main(String args[])
+    {
+        int count=0;
+        System.out.print("enter the string:");
+        Scanner sc=new Scanner(System.in);
+        String s1=sc.nextLine();
+        System.out.print("re-enter the string:");
+        String s2=sc.nextLine();
+        if(s1.equals(s2))
+        System.out.print("valid");
+        else
+        System.out.print("invalid");
+    }
+}
