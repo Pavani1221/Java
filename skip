@@ -1,0 +1,23 @@
+import java.util.*;
+public class skip {
+    public static void main(String args[])
+    {
+        int m,n,k;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter m:");
+        m=sc.nextInt();
+        System.out.print("enter n:");
+        n=sc.nextInt();
+        System.out.print("enter k:");
+        k=sc.nextInt();
+        if(m<=0||n<=0||k<=0||m>=n)
+        {
+            System.out.print("enter valid input");
+        }
+        System.out.print("after skipping numbers:");
+        for(int i=m;i<=n;i+=k)
+        System.out.print(i+" ");
+
+    }
+    
+}
