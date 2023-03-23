@@ -1,0 +1,60 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class MergeSortedArrays {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Input array 1
+        System.out.print("Enter the size of array 1: ");
+        int size1 = input.nextInt();
+        int[] arr1 = new int[size1];
+        System.out.println("Enter the elements of array 1 in sorted order:");
+        for (int i = 0; i < size1; i++) {
+            arr1[i] = input.nextInt();
+        }
+
+        // Input array 2
+        System.out.print("Enter the size of array 2: ");
+        int size2 = input.nextInt();
+        int[] arr2 = new int[size2];
+        System.out.println("Enter the elements of array 2 in sorted order:");
+        for (int i = 0; i < size2; i++) {
+            arr2[i] = input.nextInt();
+        }
+
+        // Merge the arrays using ArrayList
+        ArrayList<Integer> mergedList = new ArrayList<>();
+        int i = 0, j = 0;
+        while (i < size1 && j < size2) {
+            if (arr1[i] <= arr2[j]) {
+                mergedList.add(arr1[i]);
+                i++;
+            } else {
+                mergedList.add(arr2[j]);
+                j++;
+            }
+        }
+        while (i < size1) {
+            mergedList.add(arr1[i]);
+            i++;
+        }
+        while (j < size2) {
+            mergedList.add(arr2[j]);
+            j++;
+        }
+
+        // Convert ArrayList to array
+        int[] mergedArray = new int[mergedList.size()];
+        for (int k = 0; k < mergedList.size(); k++) {
+            mergedArray[k] = mergedList.get(k);
+        }
+
+        // Print the merged array
+        System.out.print("Merged array: ");
+        for (int k = 0; k < mergedArray.length; k++) {
+            System.out.print(mergedArray[k] + " ");
+        }
+        System.out.println();
+    }
+}
