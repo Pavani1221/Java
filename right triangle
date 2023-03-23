@@ -1,0 +1,22 @@
+import java.util.*;
+public class righttriangle
+ {
+    public static void main(String args[])
+    {
+    Scanner sc=new Scanner(System.in);
+    System.out.print("enter the character that has to be printed:");
+    char c=sc.next().charAt(0);
+    System.out.print("enter the max no of times that the character has to be printed:");
+    int n=sc.nextInt();
+    int i,j;
+    for(i=1;i<=n;i++)
+    {
+    for(j=1;j<=i;j++)
+    {
+        System.out.print(c+" ");
+    }
+    System.out.println();
+    }
+    
+}
+ }
