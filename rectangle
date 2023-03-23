@@ -1,0 +1,22 @@
+import java.util.*;
+public class rectangle
+ {
+    public static void main(String args[])
+    {
+    System.out.print("enter rows:");
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    System.out.print("enter columns:");
+    int m=sc.nextInt();
+    System.out.println("rectangle pattern:");
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=m;j++)
+        {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+    
+}
+}
