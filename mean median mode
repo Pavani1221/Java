@@ -1,0 +1,53 @@
+import java.util.*;
+public class mmm 
+{
+
+    public static void main(String[] args) {
+
+        // Read input from the user
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();
+        int[] array = new int[n];
+        System.out.println("Enter the elements of the array: ");
+        for (int i = 0; i < n; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        // Find the mean of the array
+        double sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum += array[i];
+        }
+        double mean = sum / n;
+        System.out.println("Mean = " + mean);
+
+        // Find the median of the array
+        Arrays.sort(array);
+        double median;
+        if (n % 2 == 0) {
+            median = (double) (array[n / 2 - 1] + array[n / 2]) / 2;
+        } else {
+            median = array[n / 2];
+        }
+        System.out.println("Median = " + median);
+
+        // Find the mode of the array
+        int maxCount = 0;
+        int mode = array[0];
+        for (int i = 0; i < n; i++) {
+            int count = 0;
+            for (int j = 0; j < n; j++) {
+                if (array[j] == array[i]) {
+                    count++;
+                }
+            }
+            if (count > maxCount) {
+                maxCount = count;
+                mode = array[i];
+            }
+        }
+        System.out.println("Mode = " + mode);
+    }
+}
+
